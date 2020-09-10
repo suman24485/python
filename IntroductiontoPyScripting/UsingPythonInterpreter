@@ -1,0 +1,32 @@
+How to install Python Interpreter
+
+Fedora - sudo dnf install python
+Ubuntu - sudo apt-get install python
+
+On Centos
+Not available in the repo .. We need to install it by building the latest code
+https://realpython.com/installing-python/
+$ sudo yum -y groupinstall "Development Tools"
+$ sudo yum -y install gcc openssl-devel bzip2-devel libffi-devel
+https://realpython.com/installing-python/#how-to-build-python-from-source-code
+$ tar xvf Python-3.8.4.tgz
+$ cd Python-3.8.4
+$ ./configure --enable-optimizations --with-ensurepip=install
+$ make -j 8
+SystemError: <built-in function compile> returned NULL without setting an error
+generate-posix-vars failed
+
+to fix the above error - Remove "--enable-optimizations" and run below commands 
+$ ./configure --with-ensurepip=install
+$ make clean
+$ make -j 8
+$ sudo make altinstall
+
+
+Interactive mode 
+$ python
+>>> 3 + 4
+>>> print ("ACG")
+>>> 4/2
+>>> 3*2
+>>>
