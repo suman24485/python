@@ -1,0 +1,23 @@
+Create a Virtual Environment (virutal env will be specific to python version used)
+Manage a Virtual Environment
+Manage packages with pip
+
+
+https://www.liquidweb.com/kb/how-to-setup-a-python-virtual-environment-on-centos/
+        what to install to create virtual env
+        on Fedora
+            $dnf install python3-virtualenv
+            $ python -m venv new_virt
+            $ 
+        on Centos
+            $ sudo tum update -y
+            $ sudo python3 -m venv python3-virtualenv
+            $ source python3.8-virtualenv/bin/activate
+            $ yum install python3.8-pip
+            $ pip3 freeze ( Output installed packages in requirements format)
+        Installing packages using pip
+            $ pip install -r requirements.txt (where requirements.txt have list of packages and their versions)
+            
+
+
+
