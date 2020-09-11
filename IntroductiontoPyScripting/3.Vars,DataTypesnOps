@@ -1,0 +1,145 @@
+#######################################
+Working with numbers,strings and lists
+#######################################
+numbers
+>>> num1=10
+>>> num2=30
+>>> num3=40.087857
+>>> num4=0.5453453
+
+strings
+>>> str1 = 'sdklfgi'
+>>> str2 = "tastahhhasx"
+>>> str3 = "asf345454dsgag"
+>>> print(str1)
+>>> print(str1[1])
+
+
+>>> str1 = '112234edf4t'
+>>> print(str1)
+112234edf4t
+>>> print(str1[0])
+1
+>>> print(str1[1])
+1
+>>> print(str1[11])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+>>> print(str1[12])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+>>> print(str1[10])
+t
+>>> print(str1[1:])
+12234edf4t
+>>> print(str1[0:5])
+11223
+>>> print(str1[:3])
+112
+
+lists
+myList1 = [12124, 0.04535, 'askdjhajkfg', "kdajhga"]
+
+>>> print(myList1[1])
+0.04535
+>>> print(myList1[2])
+askdjhajkfg
+>>> print(myList1[4])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+
+>>> print (myList1[1:3])
+print(myList1 *2) - duplicates the existing list by 2
+print(myList1 + myList2) - concatenates two lists
+
+myList1[1]='newvalue'
+
+#######################################
+MAking use of Python tuples and dictionaries
+#######################################
+tuples
+myTuple=(1223242,14321512,5657864)
+print(myTuple[2])
+myTuple[1]=254
+myTupleNew=(myTuple[0], 0, myTuple[2])
+print(myTupleNew)
+del myTuple
+
+dictionaries
+dict = {'Name': 'Tom', 'Height':6.2}
+print dict
+dict['Name']='Jon'
+print(dict)
+del dict.['Name']
+print dict
+dict.clear()
+print dict
+
+#######################################
+Performing Arithmetic Ops and Making Comparisons
+#######################################
+Arithmetic
+Modulus - %
+Exponent - **
+Divison - /
+Floor Division - // (truncate any decimals)
+
+equal ==
+not equal != or <>
+>
+<
+>=
+<=
+
+2+2 4
+"test" + "table"  testtable
+"test" - "table"  ERROR : operator not supported
+2+2*3/1.5**2
+((2+2)*3/3)**2
+
+5 == 5
+true
+
+"test" > "tests"
+"test" < "tests"
+#######################################
+Assigning values and bitwise operations
+#######################################
+a = 0b11110001
+b = 0b11100101
+print(bin(a)+"\n" + bin(b))
+bin(a&b)
+bin(a|b)
+bin(a^b)
+bin(b>>3) - right shift
+bin(a<<2) - left shift
+#######################################
+Performing logical ops and operator precedence
+#######################################
+Logical Operators
+a=2
+b=3
+c=4
+(a<b) or (b<c)
+(a<b) and (b<c)
+not((a<b) and (b<c))
+
+Identity Operators
+n1=3
+n2=3
+n3=4
+n1 is n2
+n1 is n3
+n1 is not n3
+
+Membership Operators
+list = [3535, 25, 2, 242]
+n1=25
+n1 in list
+n1 not in list
+
+Operator Precedence
+check https://docs.python.org/3/reference/expressions.html

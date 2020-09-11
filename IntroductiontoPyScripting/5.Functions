@@ -1,0 +1,20 @@
+Function Syntax
+PArameters
+Return Values
+Variable scope : global and local
+
+def addition(num1,num2):
+        return num1+num2
+
+def division(num1,num2):
+        if num2==0:
+                return "ERROR"
+        else:
+                return num1/num2
+var1=10
+var2=30
+addResult=addition(var1,var2)
+divResult=division(var1,var2)
+print(addResult)
+print(divResult)
+
