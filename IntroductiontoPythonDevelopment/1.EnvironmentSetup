@@ -1,0 +1,83 @@
+#######################################
+Installing python3.7 on Centos7
+#######################################
+$ sudo -i
+#Installing pre-requisites
+$ yum groupinstall -y "development tools"
+$ yum install -y \
+  libffi-devel \
+  zlib-devel \
+  bzip2-devel \
+  openssl-devel \
+  ncurses-devel \
+  sqlite-devel \
+  readline-devel \
+  tk-devel \
+  gdbm-devel \
+  db4-devel \
+  libpcap-devel \
+  xz-devel \
+  expat-devel \
+  postgresql-devel
+
+$ cd /usr/src
+#Getting the latest python source
+$ wget http://python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz
+$ tar xf Python-3.7.2.tar.xz
+$ cd Python-3.7.2
+#Building the python libraries
+$ ./configure --enable-optimizations
+$ make altinstall (causes it to not replace the built in python executable.)
+Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+ $ sudo pip3.7 install --upgrade pip
+
+#######################################
+Installing python3.7 on Debian/Ubuntu
+#######################################
+$ sudo -i
+$ apt update -y
+$ apt install -y \
+  wget \
+  build-essential \
+  libffi-dev \
+  libgdbm-dev \
+  libc6-dev \
+  libssl-dev \
+  zlib1g-dev \
+  libbz2-dev \
+  libreadline-dev \
+  libsqlite3-dev \
+  libncurses5-dev \
+  libncursesw5-dev \
+  xz-utils \
+  tk-dev
+
+$ cd /usr/src
+$ wget http://python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz
+$ tar xf Python-3.7.2.tar.xz
+$ cd Python-3.7.2
+$ ./configure --enable-optimizations
+$ make altinstall
+
+$ make altinstall (causes it to not replace the built in python executable.)
+Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+$ sudo pip3.7 install --upgrade pip
+
+#######################################
+Picking a text editor for IDE
+#######################################
+VIM
+emacs
+
+#######################################
+Settingup a VIM development environment
+#######################################
+https://linuxacademy.com/site-content/uploads/2019/05/vim-1.png
+$ sudo yum update -y
+$ sudo yum groupinstall -y "development tools"
+$ sudo yum install -y vim-enhanced
+
+Pull down sample vimrc
+Vim is a great text editor, but it doesn't have the best default settings. I've created a simple, yet usable vim configuration to use with this course that will improve our experience while writing Python code. Let's fetch this file now:
+
+$ curl https://raw.githubusercontent.com/linuxacademy/content-intro-to-python-development/master/helpers/vimrc -o ~/.vimrc
