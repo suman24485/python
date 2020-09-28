@@ -2,10 +2,41 @@
 Using the REPL(Read,Evaluate,Print,Loop)
 #######################################
 
+
+
 #######################################
 Creating and Running Python Files
 #######################################
 
+vi hello.py
+#!/usr/bin/env python3.7
+print("Hello, World")
+We're not quite done, because now we need to make the file executable using chmod:
+
+$ chmod u+x hello.py
+
+$ mkdir ~/bin
+$ mv hello.py ~/bin/hello
+Here's how we add this directory to the $PATH in our .bashrc (the .bashrc for this course already contains this):
+
+$ export PATH=$PATH:$HOME/bin
+Finally, let's run the hello script from our $PATH:
+
+$ hello
+Hello, World!
+
+
 #######################################
 Using Comments
 #######################################
+
+# This is a full line comment
+Or we can comment at the end of a line:
+
+2 + 2 # This will add the numbers
+
+block Comments
+"""
+This is not a block comment,
+but it will still work when you really need for some lines of code to not execute.
+"""
